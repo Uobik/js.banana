@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "Banana",
+    "version": "1.0.0",
+
+    "description": "Banana",
+    "icons": {
+        "128": "icon.png"
+    },
+
+    "content_scripts": [
+        {
+            "run_at": "document_idle",
+            "matches": [
+            "http://172.16.20.146/*"
+            ],
+            "js": [
+            "banana.js"
+            ]
+        }
+    ],
+
+    "permissions": [
+        "background",
+        "clipboardWrite",
+        "clipboardRead"
+    ]
+}
